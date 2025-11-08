@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document Analyser</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preload" href="assets\click24.png" as="image">
+        <link rel="preload" href="assets\cursor24.png" as="image">
+    </head>
+    <body>
+        <!-- Fixed items: START -->
+            <input type="file" id="file-input" multiple hidden>
+
+            <div id="fileMenu">
+                <p class="tp">File Menu</p>
+                <hr>
+                <div id="fileBtns">
+                    <div id="addFile" onclick="addFile()">Add</div>
+                    <div id="removeAll" onclick="removeAllFiles()">Clear All</div>
+                </div>
+                <div id="fileNames">
+                    No files choosen
+                </div>
+                <div id="uploadFile">Upload</div>
+                <hr>
+                <div id="infoBar">
+                    <div id="info"></div>
+                </div>
+            </div>
+
+            <div id="graphArea">
+                <div id="graphGen">Generate Flowchart</div>
+            </div>
+
+
+            <div id="msgDisp"></div>
+            <div id="chatMenu">
+                <div id="chatContent"></div>
+                <div id="chattool">
+                    <textarea id="messageBox" placeholder="Type your message..."></textarea>
+                    <div id="tools"><div id="sendBtn">Send</div></div>
+                </div>
+            </div>
+
+            <div id="operations">
+                <!-- <img id="optionHide" src="assets/menu.png" width="32px" height="32px"> -->
+                <img class="optionIcons" id="fileMenuBtn" src="assets/fileUpload.svg" width="32px" height="32px" title="Upload Files" alt="Upload Files">
+                <img class="optionIcons" id="chatMenuBtn" src="assets/chat-bubble.png" width="32px" height="32px" title="Chat" alt="Chat">
+                <!-- <img class="optionIcons" id="searchBtn" src="assets/search.png" width="32px" height="32px" title="Search" alt="Search" > -->
+                <img class="optionIcons" id="graphBtn" src="assets/graph.svg" width="32px" height="32px" title="Visual flow" alt="Visual flow" >
+                <img class="optionIcons" id="reportBtn" src="assets/document.png" width="32px" height="32px" title="View report" alt="View report" >
+                <img class="optionIcons" id="analyticsBtn" src="assets/analytics.svg" width="32px" height="32px" title="Analytics" alt="Analytics" >
+            </div>
+
+            <div id="qntAnl">
+                <div id="qntAnlGen">Perform Quantitative Analysis</div>
+            </div>
+        <!-- Fixed items: END -->
+
+        <div class="header">
+            <div id="title">
+                <img src="assets/agentd_logo.png" width="250px" height="80px">
+            </div>
+        </div>
+        <div id="main">
+            <div id="workspace">
+                <p id="head1"> Upload Files for Summary, flowchart and Quantitative Analysis
+
+
+            </div>
+        </div>
+        <script type="module" src="./script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    </body>
+</html>

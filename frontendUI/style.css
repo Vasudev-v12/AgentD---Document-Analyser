@@ -1,0 +1,420 @@
+@font-face {
+    font-family: "Domine";
+    src: url('./fonts/Domine,Prata/Domine/Domine-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Prata";
+    src: url('./fonts/Domine,Prata/Prata/Prata-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family: "Nunito";
+    src: url('./fonts/Nunito/Nunito-VariableFont_wght.ttf');
+}
+@font-face{
+    font-family: "lexend_giga";
+    src: url('./fonts/Lexend_Giga/LexendGiga-VariableFont_wght.ttf');
+}
+@font-face{
+    font-family: "DM_serif_text_italic";
+    src: url('./fonts/more/DM_Serif_Text/DMSerifText-Regular.ttf');
+}
+@font-face{
+    font-family: "DM_serif_text";
+    src: url('./fonts/more/DM_Serif_Text/DMSerifText-Italic.ttf');
+}
+@font-face{
+    font-family: "Funnel_sans";
+    src: url('./fonts/more/Funnel_Sans/FunnelSans-VariableFont_wght.ttf');
+}
+@font-face{
+    font-family: "Funnel_sans_italic";
+    src: url('./fonts/more/Funnel_Sans/FunnelSans-Italic-VariableFont_wght.ttf');
+}
+@font-face{
+    font-family: "Google_sans_code";
+    src: url('./fonts/more/Google_Sans_Code/GoogleSansCode-VariableFont_wght.ttf');
+}
+@font-face{
+    font-family: "Google_sans_code_italic";
+    src: url('./fonts/more/Google_Sans_Code/GoogleSansCode-Italic-VariableFont_wght.ttf');
+}
+@font-face{
+    font-family: "Noto_serif";
+    src: url('./fonts/more/Noto_Serif/NotoSerif-VariableFont_wdth\,wght.ttf');
+}
+@font-face{
+    font-family: "Noto_serif_italic";
+    src: url('./fonts/more/Noto_Serif/NotoSerif-Italic-VariableFont_wdth\,wght.ttf');
+}
+
+@media print {
+  .header,
+  #operations {
+    display: none !important;
+  }
+  #workspace, #graphArea, #qntAnl, #chatContent {
+        font-size: 10px;
+        display: block !important;
+        visibility: visible !important;
+        position: static !important;
+        page-break-inside: avoid;
+      }
+      
+      /* If chatContent is empty, hide it */
+      #chatContent:empty {
+        display: none;
+      }
+      
+      /* Force backgrounds and colors */
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+}
+
+body{
+    margin: 0px;
+    cursor: url("assets/cursor24.png"),auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(227, 224, 224);
+}
+
+/* Header part ----- start*/
+.header{
+    height: 80px;
+    padding-left: 10px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background: rgba(199, 196, 196, 0.228);
+    backdrop-filter: blur(10px);
+}
+#navigation{
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    height: 10px;
+    font-size: 18px;
+}
+.navopt{
+    width: 40px;
+    padding: 0  10px;
+    font-weight: bold;
+    color: rgb(88, 86, 86);
+}
+.navopt:hover{
+    font-size: 20px;
+    transition: transform 0.8s ease, font-size 0.2s ease; 
+    cursor: url('assets/click24.png'), auto;
+}
+/* #heading{
+    margin-bottom: 10px;
+    margin-top:10px;
+    font-weight: bold;
+} */
+#title,.tp{
+    font-size: 30px;
+    font-family: "Domine", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bold;
+    color: blue;
+}.tp{margin: 22px;}
+/* Header part ----- end*/
+
+
+
+/* side tool bar ----- start*/
+#main{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#operations{
+    position: fixed;
+    left: 22px;
+    top: 50%;
+    translate: 0 -50%;
+    display: grid;
+    height: fit-content;
+    width: 48px;
+    background: #faf6f6;
+    z-index: 200;
+    /* backdrop-filter: blur(3px); */
+    border: solid rgb(172, 167, 167) 1px;
+    border-radius: 28px;
+}
+.optionIcons{
+    margin:8px;
+}
+
+.optionIcons:hover{
+    width: 36px;
+    height: 36px;
+    margin: 6px;
+    transition: 0.3s ease;
+    cursor: url('assets/click24.png'), auto;
+}
+
+/* side tool bar ----- end*/
+
+/* chat bar ----- start */
+#chatMenu{
+    position: fixed;
+    display: none;
+    margin: 22px;
+    bottom: 0px;
+    top: 80px;
+    right: 0px;
+    width: 90%;
+    padding: 10px;
+    background: #8e8a8a55;
+    backdrop-filter: blur(10px);
+    border: solid rgb(172, 167, 167) 0px;
+    border-radius: 28px;
+    transition: width 0.2s ease-out;
+    overflow: auto;
+}
+#messageBox{
+    bottom: 0px;
+    margin: 5px;
+    padding: 10px;
+    border: solid rgb(172, 167, 167) 1px;
+    border-radius: 28px;
+    height: 150px;
+    width: 98%;
+    font-size: 20px;
+}
+#sendBtn{
+    margin: 10px;
+    width: 72px;
+    height: 38px;
+    font-size: 25px;
+    border: solid rgb(0, 0, 0) 2px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+#sendBtn:hover{
+    background-color: rgb(209, 202, 202);
+}
+
+#chatContent{
+    position:absolute;
+    top:0px;
+    width:98%
+}
+#chattool{
+    position: absolute;
+    bottom: 0px;
+    width: 98%;
+}
+#tools{
+    display:flex;
+    margin: 5px;
+}
+#userMsg{
+    margin: 10px;
+    background-color: #c6b9f0;
+    color: black;
+    border-radius: 15px;
+    padding: 3px;
+    text-align: right;
+    font-family: "Google_sans_code";
+}
+#agentMsg{
+    margin: 10px;
+    background-color: rgb(204, 200, 200);
+    color: black;
+    border-radius: 15px;
+    padding: 3px;
+    text-align:justify;
+    font-family: "Google_sans_code";
+}
+/* chat bar ----- end */
+
+/* file menu ----- start */
+#fileMenu{
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    translate: -50%;
+    z-index: 100;
+    width: 600px;
+    height: 0px;
+    overflow: hidden;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: rgba(199, 196, 196, 0.228);
+    backdrop-filter: blur(10px);
+    transition: height 0.2s ease-out;
+}
+#fileNames{margin: 22px;font-size: 18px;font-family: "Nunito";height: 155px;overflow: auto;}
+#fileBtns{
+    display: flex;
+}
+#uploadFile,#addFile,#removeAll{
+    background-color: rgba(29, 29, 197, 0.543);
+    height: 36px;
+    width: 112px;
+    border-radius: 8px;
+    text-align: center;
+    align-content: center;
+    margin-left: 22px;
+    font-family: "lexend_giga",serif;
+}
+#uploadFile:hover,#addFile:hover,#removeAll:hover{
+    background: rgba(71, 27, 174, 0.765);
+    transition: background 0.4s ease;
+}
+#infoBar{
+    display: flex;
+}
+/* file menu ----- end */
+
+/* workspace ------ start */
+#workspace{    
+    width: 900px;
+    top: 70px;
+}
+#head1{
+    color: #6f19e7;
+    font-family: 'funnel_sans';
+    font-size: 30px;
+}
+#head2{
+    color: rgb(66, 214, 88);
+    font-family: 'lexend_giga';
+    font-size: 25px;
+}
+#head3{
+    color: black;
+    font-family: 'google_sans_code';
+    font-size: 20px;
+}
+/* workspace ------ end */
+
+/* graph---- start */
+#graphArea{
+    position:fixed;
+    height: 100%;
+    width:0px;
+    transition: ease 0.3s;
+    background-color: rgb(252, 250, 248);
+    top:80px;
+    right:0px;
+    width:0;
+    overflow:auto;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+#graphGen{
+    width:80px;
+    height:fit-content;
+    background-color: #6361f0;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: url('assets/click24.png'), auto;
+}
+#graphSVG{
+    width: 600px;
+    height: 600px;
+}
+/* graph---- end */
+
+/* qntitavite Analysis ----- start */
+#qntAnl{
+    position:fixed;
+    top:80px;
+    right:0px;
+    background-color: rgb(243, 241, 241);
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width:0;
+    font-size: 20px;
+    overflow: auto;
+    transition: ease 0.3s;
+}
+#qntAnlGen{
+    width:100px;
+    height:fit-content;
+    background-color: #6361f0;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: url('assets/click24.png'), auto;
+}
+.focus-box {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f0f8ff;
+  border-left: 5px solid #007bff;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f1f9ff;
+}
+
+.keyword-details {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* qntitavite Analysis ----- end */
+
+/* loader (spinner) -- start */
+.loader {
+  width: 25px;
+  height: 25px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#6361f0 94%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#9276e7);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation: l13 1s infinite linear;
+}
+@keyframes l13{ 
+  100%{transform: rotate(1turn)}
+}
+/* loader (spinner) -- end */

@@ -1,0 +1,14 @@
+{
+  "name": "frontendui",
+  "version": "1.0.0",
+  "description": "UI files of document analyser app",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vasudev Shreekumar",
+  "license": "ISC",
+  "dependencies": {
+    "mermaid": "^11.12.0"
+  }
+}
