@@ -17,9 +17,8 @@ SETUP THE PROJECT
 
 
 
-
-
 RUN THE SOFTWARE
 
 * open 'backend' folder and run 'server.py'.
 * open 'frontendUI' folder in terminal and execute command: 'npx serve'.
+* open 'https://localhost:3000' in any browser. (This will open the GUI of the software)
