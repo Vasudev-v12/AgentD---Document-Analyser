@@ -1,5 +1,4 @@
-AgentD
-
+<img src="frontendUI/assets/agentd_logo.png">
 
 
 ABOUT SOFTWARE
@@ -22,3 +21,12 @@ RUN THE SOFTWARE
 * open 'backend' folder and run 'server.py'.
 * open 'frontendUI' folder in terminal and execute command: 'npx serve'.
 * open 'https://localhost:3000' in any browser. (This will open the GUI of the software)
+
+
+
+SCREENSHOTS
+
+<img src="images/filemenu.png">
+<img src="images/summary.png.png">
+<img src="images/flowchart.png.png">
+<img src="images/qualitativeAnls.png.png">
