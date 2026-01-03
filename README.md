@@ -12,7 +12,7 @@ SETUP THE PROJECT
 
 * Download this repository into your local machine.
 * Go to this link "https://aistudio.google.com/" and get an 'API key' for using Gemini API.
-* Paste the API key in to the "placeholder" field in the .env file.
+* Paste the API key in to the "placeholder" field in the file: "backend/.env file".
 
 
 
