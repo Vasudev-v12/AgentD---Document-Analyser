@@ -27,6 +27,6 @@ RUN THE SOFTWARE
 SCREENSHOTS
 
 <img src="images/filemenu.png">
-<img src="images/summary.png.png">
-<img src="images/flowchart.png.png">
-<img src="images/qualitativeAnls.png.png">
+<img src="images/summary.png">
+<img src="images/flowchart.png">
+<img src="images/qualitativeAnls.png">
